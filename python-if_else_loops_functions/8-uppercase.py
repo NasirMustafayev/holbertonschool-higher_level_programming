@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-def uppercase(c):
-    if ord('A') <= ord(c) <= ord('Z'):
+def uppercase(str):
+    if ord('A') <= ord(str) <= ord('Z'):
         return True
     else:
         return False
