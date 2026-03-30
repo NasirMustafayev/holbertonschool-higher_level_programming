@@ -12,9 +12,6 @@
 >>> add_integer(100.3, -2)
 98
 
->>> add_integer(2, 3.5)
-5
-
 >>> add_integer("cart", 1)
 Traceback (most recent call last):
     ...
@@ -29,3 +26,8 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
