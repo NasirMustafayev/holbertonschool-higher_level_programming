@@ -4,7 +4,7 @@
 My name is Name Lastname
 
 >>> say_my_name("Name")
-My name is Name
+My name is Name 
 
 >>> say_my_name(1, "string")
 Traceback (most recent call last):
