@@ -27,6 +27,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_duplicates(self):
         self.assertEqual(max_integer([1, 1, 1]), 1)
+    
+    def test_max_at_middle(self):
+        self.assertEqual(max_integer([1, 4, 2, 3]), 4)
 
 if __name__ == "__main__":
     unittest.main()
