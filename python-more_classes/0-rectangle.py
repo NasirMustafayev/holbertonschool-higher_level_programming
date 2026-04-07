@@ -3,8 +3,11 @@
 
 
 class Rectangle:
-    """Defining Rectangle class with private width and height instance attributes"""
-    def __init__(self, width = 0, height = 0):
+    """
+    Defining Rectangle class with private width and height instance attributes
+    and public getter and setter methods for each of the attributes
+    """
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
