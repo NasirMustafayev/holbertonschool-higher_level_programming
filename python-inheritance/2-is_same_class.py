@@ -6,7 +6,4 @@ Defining a function for instance check
 
 def is_same_class(obj, a_class):
     """Returns True if the obj is instance of a_class"""
-    if isinstance(obj, a_class):
-        return True
-    else:
-        return False
+    return isinstance(obj, a_class)
