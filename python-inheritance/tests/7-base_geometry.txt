@@ -2,49 +2,49 @@
 
 >>> bg = BaseGeometry()
 
->>> bg.integer_validator("age", 1)
+>>> bg.integer_validator("nigga", 1)
 
->>> bg.integer_validator("age", 31)
+>>> bg.integer_validator("nigga", 31)
 
->>> bg.integer_validator("age", 0)
+>>> bg.integer_validator("nigga", 0)
 Traceback (most recent call last):
     ...
-ValueError: age must be greater than 0
+ValueError: nigga must be greater than 0
 
->>> bg.integer_validator("age", -1)
+>>> bg.integer_validator("nigga", -1)
 Traceback (most recent call last):
     ...
-ValueError: age must be greater than 0
+ValueError: nigga must be greater than 0
 
->>> bg.integer_validator("age", "hello")
+>>> bg.integer_validator("nigga", "hello")
 Traceback (most recent call last):
     ...
-TypeError: age must be an integer
+TypeError: nigga must be an integer
 
->>> bg.integer_validator("age", 1.5)
+>>> bg.integer_validator("nigga", 1.5)
 Traceback (most recent call last):
     ...
-TypeError: age must be an integer
+TypeError: nigga must be an integer
 
->>> bg.integer_validator("age", None)
+>>> bg.integer_validator("nigga", None)
 Traceback (most recent call last):
     ...
-TypeError: age must be an integer
+TypeError: nigga must be an integer
 
->>> bg.integer_validator("age", True)
+>>> bg.integer_validator("nigga", True)
 Traceback (most recent call last):
     ...
-TypeError: age must be an integer
+TypeError: nigga must be an integer
 
->>> bg.integer_validator("age", [1, 2])
+>>> bg.integer_validator("nigga", [1, 2])
 Traceback (most recent call last):
     ...
-TypeError: age must be an integer
+TypeError: nigga must be an integer
 
->>> bg.integer_validator("age", (1, 2))
+>>> bg.integer_validator("nigga", (1, 2))
 Traceback (most recent call last):
     ...
-TypeError: age must be an integer
+TypeError: nigga must be an integer
 
 >>> bg.area()
 Traceback (most recent call last):
