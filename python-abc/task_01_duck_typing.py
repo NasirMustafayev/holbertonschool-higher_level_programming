@@ -23,7 +23,7 @@ class Shape(ABC):
 class Circle(Shape):
     """Concrete class representing a circle."""
     def __init__(self, radius):
-        self.__radius = radius
+        self.__radius = abs(radius)
 
     def area(self):
         return math.pi * (self.__radius ** 2)
@@ -51,7 +51,7 @@ and prints its area and perimeter.
 """
 
 
-def shape_info(clas):
+def shape_info(shape):
     """Prints the area and perimeter of a shape instance."""
-    print("Area: {}".format(clas.area()))
-    print("Perimeter: {}".format(clas.perimeter()))
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
