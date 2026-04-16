@@ -23,11 +23,11 @@ class VerboseList(list):
         super().extend(items)
         print("Extended the list with [{}] items.".format(len(items)))
 
-    def pop(self, item=-1):
+    def pop(self, index=-1):
         """
         Override the pop method to print a message when an item is popped.
         """
-        popped = super().pop(item)
+        popped = super().pop(index)
         print("Popped [{}] from the list.".format(popped))
 
     def remove(self, item):
