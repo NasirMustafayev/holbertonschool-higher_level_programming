@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This module contains a function that generates the Pascal's triangle of a given size.
+This module contains a function that generates
+the Pascal's triangle of a given size.
 """
+
 
 def pascal_triangle(n):
     """Generates the Pascal's triangle of a given size."""
