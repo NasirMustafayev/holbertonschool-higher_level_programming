@@ -12,7 +12,7 @@ request = requests.get("https://jsonplaceholder.typicode.com/posts")
 
 def fetch_and_print_posts():
     """Fetches posts from the API and prints their titles."""
-    print("Status code: {}".format(request.status_code))
+    print("Status Code: {}".format(request.status_code))
 
     if request.status_code == 200:
 
