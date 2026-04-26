@@ -23,7 +23,7 @@ def get_usernames():
 
 @app.route("/status")
 def get_status():
-    return jsonify({"status": "OK"})
+    return "OK"
 
 
 @app.route("/users/<username>")
@@ -46,7 +46,7 @@ def create_user():
         return jsonify({"error": "User already exists"}), 409
 
     users[username] = data
-    return jsonify(data), 201
+    return jsonify({"message": "User added", "user": data}), 201
 
 
 if __name__ == "__main__":
