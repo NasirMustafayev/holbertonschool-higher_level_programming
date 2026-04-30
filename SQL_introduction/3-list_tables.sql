@@ -1,2 +1,4 @@
 -- Write a script that lists all the tables of a database in MySQL
-SHOW TABLES FROM mysql;
+SELECT table_name 
+FROM information_schema.tables 
+WHERE table_schema = DATABASE();
