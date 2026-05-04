@@ -1,5 +1,2 @@
--- Description of first_table
-SELECT COLUMN_NAME, COLUMN_TYPE
-FROM information_schema.COLUMNS
-WHERE TABLE_NAME = 'first_table'
-AND TABLE_SCHEMA = DATABASE();
+--Select all records of the table first_table
+SHOW CREATE TABLE first_table;
