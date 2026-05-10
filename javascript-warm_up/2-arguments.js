@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const args = process.env.slice(2)
+const args = process.env.argv(2)
 
 if (args.length === 0) {
     console.log('No argument')
