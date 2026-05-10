@@ -11,7 +11,7 @@ function factorial (n) {
 const arg = process.argv[2];
 const convert = +arg;
 
-if (isNaN(convert)) {
+if (isNaN(convert) || convert < 0) {
   console.log('NaN');
 } else {
   console.log(factorial(convert));
