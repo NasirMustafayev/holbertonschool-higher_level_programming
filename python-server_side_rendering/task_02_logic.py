@@ -3,9 +3,6 @@ import json
 
 app = Flask(__name__)
 
-with open('items.json') as f:
-    data = json.load(f)
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -20,7 +17,16 @@ def contact():
 
 @app.route('/items')
 def items():
-    return render_template('items.html', items=data['items'])
+    # Load the data INSIDE the function so it catches 
+    # changes made by the test runner
+    try:
+        with open('items.json', 'r') as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        data = {"items": []}
+
+    # Pass the list to the template
+    return render_template('items.html', items=data.get('items', []))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
