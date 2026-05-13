@@ -7,16 +7,19 @@
 </head>
 <body>
     {% include 'header.html' %}
+
     <h1>Items List</h1>
-    <p>Here are some items:</p>
+
     <ul>
         {% if items|length == 0 %}
-            <li>No items available.</li>
+            <li>No items found</li>
+        {% else %}
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
         {% endif %}
-        {% for item in items %}
-            <li>{{ item }}</li>
-        {% endfor %}
     </ul>
+
     {% include 'footer.html' %}
 </body>
 </html>

@@ -1,8 +1,10 @@
-from flask import Flask, json, render_template
-
-data = json.load(open('items.json'))
+from flask import Flask, render_template
+import json
 
 app = Flask(__name__)
+
+with open('items.json') as f:
+    data = json.load(f)
 
 @app.route('/')
 def index():
@@ -22,3 +24,4 @@ def items():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+    
