@@ -7,9 +7,11 @@ def generate_invitations(template, attendees):
     
     if len(template) == 0:
         print("Template is empty, no output files generated.")
+        return
 
     if len(attendees) == 0:
         print("No data provided, no output files generated.")
+        return
 
     for attendee in attendees:
         attendee_number = attendees.index(attendee) + 1
