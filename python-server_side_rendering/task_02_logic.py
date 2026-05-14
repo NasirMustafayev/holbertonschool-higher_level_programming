@@ -17,15 +17,12 @@ def contact():
 
 @app.route('/items')
 def items():
-    # Load the data INSIDE the function so it catches 
-    # changes made by the test runner
     try:
         with open('items.json', 'r') as f:
             data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         data = {"items": []}
 
-    # Pass the list to the template
     return render_template('items.html', items=data.get('items', []))
 
 if __name__ == '__main__':
