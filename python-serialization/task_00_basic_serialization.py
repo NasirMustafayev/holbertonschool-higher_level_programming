@@ -14,7 +14,7 @@ def serialize_and_save_to_file(data, filename):
         json.dump(data, f)
 
 
-def load_and_deserialize_file(filename):
+def load_and_deserialize(filename):
     """Loads a JSON string from a file and deserializes it to a Python object.
 
     Args:
